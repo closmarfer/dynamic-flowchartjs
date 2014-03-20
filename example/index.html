@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dynamic FlowchartJS | example</title>
+        <meta charset="UTF-8">
+        <link href='css/style.css' rel='stylesheet' type='text/css'>
+        <link rel="icon" type="image/png" href="favicon.ico" />
+    </head>
+    <body>
+        <div id="fondo"></div>        
+        <!-- Aquí se crearán los elementos -->
+        <section id="navegador-servicios"></section>
+        
+        <script src="../lib/libs/jquery/jquery.min.js"></script>
+        <script src="../lib/data.json"></script>
+        <script src="../lib/dinamicFlowchartJS.js"></script>
+        <script>
+            $(document).ready(function() {
+                $("#navegador-servicios").dinamicFlowchartJS({
+                    datos: {
+                        "#inicio": {
+                            "pregunta": "Pregunta inicio",
+                            "tipo": "cuadrado",
+                            "respuestas": {
+                                "toBottom": {
+                                    "texto": "Empezar",
+                                    "enlace": "#pregunta-dos"
+                                }
+                            }
+                        },
+                        "#pregunta-dos": {
+                            "pregunta": "Pregunta dos",
+                            "tipo": "cuadrado",
+                            "respuestas": {
+                                
+                                "toLeftBottom": {
+                                    "texto": "Ir pregunta 3",
+                                    "enlace": "#pregunta-tres"
+                                }
+                            }
+                        },
+                        "#pregunta-tres": {
+                            "pregunta": "Pregunta 3",
+                            "tipo": "cuadrado",
+                            "respuestas": {
+                                "toRightBottom": {
+                                    "texto": "Ir pregunta 4",
+                                    "enlace": "#pregunta-cuatro"
+                                },
+                                "toLeftBottom": {
+                                    "texto": "Ir pregunta 4",
+                                    "enlace": "#pregunta-cuatro"
+                                }
+                            }
+                                
+                            },
+                            "#pregunta-cuatro": {
+                            "pregunta": "Pregunta 4 y final",
+                            "tipo": "circulo",
+                            "respuestas": {
+                                "toBottom": {
+                                    "texto": "final",
+                                    "enlace": "#inicio"
+                                }
+                                
+                            }
+                        }
+                        
+                    }
+                });
+            });
+        </script>
+        
+    </body>
+</html>

@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    overflow:hidden;
+   
+}
+header{
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 1px 3px rgba(0,0,0, .20);
+}
+header  .clear-self {
+    margin-bottom: 15px;
+}
+
+#navegador-servicios-enlace {
+    border-bottom: thin solid rgba(0, 0, 0, 0);
+    color: #CC0033;
+    float: right;
+    font-size: 0.9em;
+    position: relative;
+    right: 0;
+    top: 5px;
+    width: 150px;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+#fondo{
+    background:url(../img/bck.png) repeat;
+    height: 400%;
+    width: 400%;
+    position: absolute;
+    top: -200%;
+    left: -200%;
+    z-index:0;
+}
+
+#navegador-servicios{
+    height: 100%;
+}
+
+.cuadro-unidad{
+    min-height: 200px;
+    min-width: 200px;
+    position: absolute;
+    margin-left: 20px;
+    
+    top:-200%;
+
+}
+.enMedio{
+    left:0;
+    top:0;
+}
+
+
+.contenidoDiagrama{
+    margin: 0 auto;
+    width: 600px;
+
+}
+
+.circulo{
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    color: white;
+    background-color: #0480CE;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}
+.cuadrado{
+    height: 200px;
+    width: 200px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0480CE;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+
+.volver-empezar{
+    text-align: center;
+    padding-top: 30px;
+    display:block;
+    color: #bbbbbb;
+}
+.paso-anterior{
+    text-align: center;
+    padding-top: 30px;
+    display:block;
+    color: #bbbbbb;
+}
+
+
+/*##### Estilos de cuadrado con todas las esquinas*/
+.center-row{
+    height: 200px;
+}
+.row{
+    display: table-row;
+    /*height: 200px;*/
+}
+.row>div{
+    
+    display: table-cell;
+    width: 200px;
+    vertical-align: middle;
+}
+.row>div a{
+    background: none repeat scroll 0 0 #666666;
+    margin: 10px 0;
+    border-radius: 4px;
+    color: #FFFFFF;
+    display: inline-block;
+    margin-left: 20px;
+    min-height: 40px;
+    padding: 11px;
+    text-align: center;
+    text-decoration: none;
+    width: 150px;
+}
+
+.row>div a:hover{
+    box-shadow: 0 0 2px #000000;
+    background: #999999;
+}
+.invisible{
+    visibility: hidden;
+}
